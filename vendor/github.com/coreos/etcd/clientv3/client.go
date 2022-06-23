@@ -93,6 +93,10 @@ func NewFromURL(url string) (*Client, error) {
 	return New(Config{Endpoints: []string{url}})
 }
 
+func (c *Client) RefreshToken() error {
+	return c.getToken(c.ctx)
+}
+
 // Close shuts down the client's etcd connections.
 func (c *Client) Close() error {
 	c.cancel()

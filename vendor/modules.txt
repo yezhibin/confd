@@ -176,23 +176,6 @@ github.com/hashicorp/vault/helper/strutil
 github.com/jmespath/go-jmespath
 # github.com/jonboulle/clockwork v0.3.0
 ## explicit; go 1.13
-# github.com/kelseyhightower/confd v0.16.0
-## explicit
-github.com/kelseyhightower/confd/backends
-github.com/kelseyhightower/confd/backends/consul
-github.com/kelseyhightower/confd/backends/dynamodb
-github.com/kelseyhightower/confd/backends/env
-github.com/kelseyhightower/confd/backends/etcd
-github.com/kelseyhightower/confd/backends/etcdv3
-github.com/kelseyhightower/confd/backends/file
-github.com/kelseyhightower/confd/backends/rancher
-github.com/kelseyhightower/confd/backends/redis
-github.com/kelseyhightower/confd/backends/ssm
-github.com/kelseyhightower/confd/backends/vault
-github.com/kelseyhightower/confd/backends/zookeeper
-github.com/kelseyhightower/confd/log
-github.com/kelseyhightower/confd/resource/template
-github.com/kelseyhightower/confd/util
 # github.com/kelseyhightower/memkv v0.1.1
 ## explicit
 github.com/kelseyhightower/memkv

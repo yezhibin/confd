@@ -14,10 +14,11 @@ import (
 	"strings"
 	"text/template"
 
+	"Projects/confd/backends"
+	"Projects/confd/log"
+	util "Projects/confd/util"
+
 	"github.com/BurntSushi/toml"
-	"github.com/kelseyhightower/confd/backends"
-	"github.com/kelseyhightower/confd/log"
-	util "github.com/kelseyhightower/confd/util"
 	"github.com/kelseyhightower/memkv"
 	"github.com/xordataexchange/crypt/encoding/secconf"
 )

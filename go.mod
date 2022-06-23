@@ -10,7 +10,6 @@ require (
 	github.com/garyburd/redigo v1.6.0
 	github.com/hashicorp/consul v1.0.7
 	github.com/hashicorp/vault v0.10.1
-	github.com/kelseyhightower/confd v0.16.0
 	github.com/kelseyhightower/memkv v0.1.1
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec
 	github.com/sirupsen/logrus v1.8.1

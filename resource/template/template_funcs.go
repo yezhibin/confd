@@ -13,7 +13,8 @@ import (
 	"strings"
 	"time"
 
-	util "github.com/kelseyhightower/confd/util"
+	util "Projects/confd/util"
+
 	"github.com/kelseyhightower/memkv"
 )
 
