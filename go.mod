@@ -11,6 +11,7 @@ require (
 	github.com/hashicorp/consul v1.0.7
 	github.com/hashicorp/vault v0.10.1
 	github.com/kelseyhightower/memkv v0.1.1
+	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec
 	github.com/sirupsen/logrus v1.8.1
 	github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77
@@ -92,6 +93,7 @@ require (
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	gopkg.in/ini.v1 v1.66.4 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
+	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/ory-am/dockertest.v3 v3.8.1 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )

@@ -3,16 +3,18 @@ Package log provides support for logging to stdout and stderr.
 
 Log entries will be logged in the following format:
 
-    timestamp hostname tag[pid]: SEVERITY Message
+	timestamp hostname tag[pid]: SEVERITY Message
 */
 package log
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 	"time"
 
+	"github.com/natefinch/lumberjack"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -32,6 +34,25 @@ var tag string
 func init() {
 	tag = os.Args[0]
 	log.SetFormatter(&ConfdFormatter{})
+	logLevel := 4 // 0-panic, 2-error, 4-Info,  5-debug
+	logPath := "./log/server.log"
+
+	log.SetLevel(log.Level(logLevel))
+	log.SetReportCaller(true)
+	logger := &lumberjack.Logger{
+		LocalTime:  true,
+		Filename:   logPath,
+		MaxSize:    20, // 一个文件最大为10M
+		MaxBackups: 50, // 最多同时保存50份文件
+		MaxAge:     60, // 一个文件最多同时存在60天
+		Compress:   true,
+	}
+	writers := []io.Writer{
+		logger,
+		os.Stdout,
+	}
+	fileAndStdoutWriter := io.MultiWriter(writers...) //
+	log.SetOutput(fileAndStdoutWriter)
 }
 
 // SetTag sets the tag.
